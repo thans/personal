@@ -1,0 +1,82 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: cornsilk;
+}
+
+/*2d2d2d*/
+
+#pageContain {
+    background-color: cornsilk;
+    height: 500;
+}
+
+#behindNav, #nav {
+    height: 100px;
+    color: cornsilk;
+}
+
+#behindNav, #pageContain {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#nav {
+    border-bottom-right-radius: 100px;
+    -webkit-border-bottom-right-radius: 100px;
+    -moz-border-bottom-right-radius: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0;
+/*    background-color: black;
+    opacity: .7;*/
+}
+
+#nav > div {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#nav h1, #nav h2, #footer h3 {
+    display: inline;
+    margin-right: 20px;
+}
+
+#footer > div {
+    padding-top: 10px;
+    float: left;
+    width: 33%;
+
+}
+
+.left {
+    margin-left: .9%;
+}
+
+
+.middle {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+    margin: 0;
+}
+
+#nav, #footer {
+    width: 100%;
+    color: cornsilk;
+
+}
+
+#footer, #nav {
+    background-image: url('black70.png');
+}
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+
+}
