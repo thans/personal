@@ -2,6 +2,8 @@ $(document).ready(function() {
     global = {};
     $('#nav').on("mouseover", expand);
     $('#nav').on("mouseout", contract);
+    $('#nav').load('nav.html', '', function() {});
+    $('#footer').load('footer.html', '', function() {});
 
     function expand() {
         console.log('expanding');

@@ -6,6 +6,14 @@ body {
 
 /*2d2d2d*/
 
+a:link, a:visited {
+    color: cornsilk;
+}
+
+a:active {
+    color: #2d2d2d;
+}
+
 #pageContain {
     background-color: cornsilk;
     height: 500;
@@ -72,7 +80,7 @@ body {
 }
 
 #footer, #nav {
-    background-image: url('black70.png');
+    background-image: url('../images/black70.png');
 }
 
 #footer {
