@@ -7,6 +7,10 @@ body {
 
 /*2d2d2d*/
 
+#content a:link, #content a:visited, #content a:active {
+    color: #2d2d2d;
+}
+
 a:link, a:visited, a:active  {
     color: cornsilk;
 }
