@@ -2,16 +2,17 @@ body {
     padding: 0;
     margin: 0;
     background-color: cornsilk;
+    font-family: "univers", sans-serif;
 }
 
 /*2d2d2d*/
 
-a:link, a:visited {
+a:link, a:visited, a:active  {
     color: cornsilk;
 }
 
-a:active {
-    color: #2d2d2d;
+#hero {
+    height: 300px;
 }
 
 #pageContain {
@@ -19,27 +20,37 @@ a:active {
     height: 500;
 }
 
+#content {
+    padding-bottom: 100px;
+}
+
 #behindNav, #nav {
-    height: 100px;
+    height: 50px;
     color: cornsilk;
 }
 
-#behindNav, #pageContain {
+#pageContain {
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 60%;
+}
+
+#behindNav, #nav {
+    position: fixed;
+    top: 0;
+}
+
+#behindNav {
+    right: 0;
 }
 
 #nav {
-    border-bottom-right-radius: 100px;
-    -webkit-border-bottom-right-radius: 100px;
-    -moz-border-bottom-right-radius: 100px;
-    position: absolute;
-    top: 0px;
     left: 0px;
     padding: 0;
-/*    background-color: black;
-    opacity: .7;*/
+}
+
+.contactList {
+    list-style-type: none;
 }
 
 #nav > div {
@@ -76,7 +87,16 @@ a:active {
 #nav, #footer {
     width: 100%;
     color: cornsilk;
+}
 
+h2, h3 {
+
+    font-weight: normal;
+    font-size: 150%;
+}
+
+h2, a:link, a:visited, a:active {
+    font-family: universCondensed;
 }
 
 #footer, #nav {
@@ -86,5 +106,20 @@ a:active {
 #footer {
     position: fixed;
     bottom: 0px;
+}
 
+@font-face {
+    font-family: univers;
+    src: url('../fonts/UniversLTStd-Light.otf');
+}
+
+@font-face {
+    font-family: univers;
+    font-weight: bold;
+    src: url('../fonts/UniversLTStd-Black.otf');
+}
+
+@font-face {
+    font-family: universCondensed;
+    src: url('../fonts/UniversLTStd-LightCn.otf');
 }
