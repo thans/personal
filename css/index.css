@@ -15,8 +15,12 @@ a:link, a:visited, a:active  {
     color: cornsilk;
 }
 
+.shade {
+    opacity: .7;
+}
+
 #hero {
-    height: 300px;
+    height: 100px;
 }
 
 #pageContain {
@@ -60,6 +64,7 @@ a:link, a:visited, a:active  {
 #nav > div {
     padding-left: 20px;
     padding-top: 20px;
+    box-shadow: 0px 1px 10px #2d2d2d;
 }
 
 #nav h1, #nav h2, #footer h3 {
@@ -91,6 +96,7 @@ a:link, a:visited, a:active  {
 #nav, #footer {
     width: 100%;
     color: cornsilk;
+
 }
 
 h2, h3 {
@@ -110,6 +116,7 @@ h2, a:link, a:visited, a:active {
 #footer {
     position: fixed;
     bottom: 0px;
+    box-shadow: 0px -1px 10px black;
 }
 
 @font-face {
