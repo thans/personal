@@ -33,10 +33,18 @@ hr {
 }
 
 #body {
-    padding: 5%;
+    padding: 2%;
     text-align: right;
-    width: 57%;
+    width: 63%;
     height: 100vh;
+}
+
+i {
+    display: inline;
+}
+
+.iconDescription {
+    display: none;
 }
 
 #nav > div {
