@@ -2,36 +2,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="shortcut icon" href="img/tore_hanssen.jpg">
 
     <title>Tore Hanssen</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
-    <link href="css/start.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
     <script src="scripts/jquery.js"></script>
-    <script src="scripts/bootstrap.js"></script>
     <script>
+      $(document).ready(function() {
 
-      $( document ).ready(function() {
-          $('.page-header').hide(0, function() {
-            $('.page-header').fadeIn(2000);
-          });
+        $('#nav > div').hover(function() {
+          $(this).animate({width: '100%'}, 500);
+        }, function() {
+          $(this).animate({width: '50px'}, 500);
+
+        });
       });
-
+      
     </script>
   </head>
 
   <body>
-    
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div role="naviagtion" id="nav">
+      <div>
+        <div>
+          <i class="fa fa-home fa-2x"></i>
+        </div>
+      </div>
+      <div>
+        A
+      </div>
+      <div>
+        P
+      </div>
+      <div>
+        L
+      </div>
+      <div>
+        C
+      </div>
+    </div>
+    <div id="body">
+      <h1>home</h1>
+      <hr />
+    </div>
+<!--     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container" id="nav">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -51,31 +68,13 @@
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div><!--/.nav-collapse
       </div>
     </div>
     <a name="top"></a>
     <div class="navdiv">
 
-    </div>
-
-<div class="body">
-
-    <div class="container chunk">
-      <a name="about"></a>
-
-      <div class="page-header">
-        <h1>Tore Hanssen</h1>
-        <h2 class="subheading">University of Washington<br /><span id="ones-zeroes">01010101010101010101010101010101010101010</span><br /> Computer Engineering</h2>
-      </div>
-      <p class="lead">Greetings!<br />My name is Tore Hanssen.  I am a student at the University of Washington where I study Computer Engineering.  My site is intended to give you an idea of some of my programming experience and help you get in contact with me.</p>
-      <p class="lead">I am passionate about developing software that is simple and intuitive.  I love being able to automate processes for people that simplify their work and their lives.  Take a look around at some of my previous experience and shoot me an email if like what you see.</p>
-    </div><!-- /.container -->
-
-
-
-
-</div>
+    </div> -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
