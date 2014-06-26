@@ -12,14 +12,18 @@
     <script src="scripts/jquery.js"></script>
     <script>
       $(document).ready(function() {
-
-        $('#nav > div').hover(function() {
+        var startingHeight = $('.fa').height()
+        $('#navbar > div').hover(function() {
           $(this).css({align: 'left'});
-          $(this).animate({width: '100%'}, 500);
-          $(this).find('.iconDescription').show();
+         // $(this).animate({height: '100px'}, 500);
+         var newHeight = $('.iconDescription').height() + $('.fa').height();
+          $(this).animate({height: newHeight}, 500);
+          $(this).find('.iconDescription').show().animate({opacity: 1}, 500);
         }, function() {
-          $(this).animate({width: '50px'}, 500);
-          $(this).find('.iconDescription').hide();
+          $(this).animate({height: $('.fa').height()}, 500);
+          $(this).find('.iconDescription').animate({opacity: 0}, 500, 'swing', function() {
+            $(this).find('.iconDescription').hide()
+          });
         });
       });
       
@@ -27,7 +31,7 @@
   </head>
 
   <body>
-    <div role="navigation" id="nav">
+<!--     <div role="navigation" id="nav">
       <div>
         <div>
           <i class="fa fa-home fa-2x"></i>
@@ -68,7 +72,51 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <div id="navbar">
+      <div class="item">
+        <div>
+          <i class="fa fa-home fa-2x"></i>
+          <div class="iconDescription">
+            Home
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+          <i class="fa fa-graduation-cap fa-2x"></i>
+          <div class="iconDescription">
+            Education
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+          <i class="fa fa-link fa-2x"></i>
+          <div class="iconDescription">
+            Links
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+          <i class="fa fa-code fa-2x"></i>
+          <div class="iconDescription">
+            Projects
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+          <i class="fa fa-user fa-2x"></i>
+          <div class="iconDescription">
+            Tore
+          </div>
+        </div>
+      </div>
     </div>
+
     <div id="body">
       <h1>home</h1>
       <hr />
