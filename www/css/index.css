@@ -26,6 +26,10 @@ hr {
     background-image:      -o-linear-gradient(left, rgba(237,170,78,0), rgba(237,170,78,0.75), rgba(237,170,78,0)); 
 }
 
+a {
+    color: #EDAA4E;
+}
+
 /*#nav, #body {
     float: left;
 }
@@ -74,6 +78,21 @@ i {
 
 h2 {
     color: #1C8B98;
+}
+
+h3 {
+    font-style: italic;
+    color: #EDAA4E;
+    font-weight: normal;
+}
+
+/* icons inside link */
+a > i {
+    color: black;
+}
+
+.signature {
+    font-style: italic;
 }
 
 #navbar > .item {
