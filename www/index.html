@@ -6,52 +6,13 @@
 
     <title>Tore Hanssen</title>
 
-    <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
   </head>
 
   <body>
-    <div id="mobileNav">
-      <div>
-        <i class="fa fa-bars fa-2x"></i>
-        <div id="mobileNavSubMenu">
-          <div class="mobileNavItem">
-            <i class="fa fa-home"></i>
-            <div class="mobileIconDescription">
-              home
-            </div>
-          </div>
-          <div class="mobileNavItem">
-            <i class="fa fa-graduation-cap"></i>
-            <div class="mobileIconDescription">
-              education
-            </div>
-          </div>
-          <div class="mobileNavItem">
-            <i class="fa fa-comments"></i>
-            <div class="mobileIconDescription">
-              blog
-            </div>
-          </div>
-          <div class="mobileNavItem">
-            <i class="fa fa-code"></i>
-            <div class="mobileIconDescription">
-              projects
-            </div>
-          </div>
-          <div class="mobileNavItem">
-            <i class="fa fa-user"></i>
-            <div class="mobileIconDescription">
-              tore
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
     <div id="navbar">
-      <div class="item" id="home">
+      <div class="item navigateHome">
         <div>
           <i class="fa fa-home fa-2x"></i>
           <div class="iconDescription">
@@ -59,7 +20,7 @@
           </div>
         </div>
       </div>
-      <div class="item" id="education">
+      <div class="item navigateEducation">
         <div>
           <i class="fa fa-graduation-cap fa-2x"></i>
           <div class="iconDescription">
@@ -67,7 +28,7 @@
           </div>
         </div>
       </div>
-      <div class="item" id="blog">
+      <div class="item navigateBlog">
         <div>
           <i class="fa fa-comments fa-2x"></i>
           <div class="iconDescription">
@@ -75,7 +36,7 @@
           </div>
         </div>
       </div>
-      <div class="item" id="projects">
+      <div class="item navigateProjects">
         <div>
           <i class="fa fa-code fa-2x"></i>
           <div class="iconDescription">
@@ -83,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="item" id="contact">
+      <div class="item navigateContact">
         <div>
           <i class="fa fa-user fa-2x"></i>
           <div class="iconDescription">
@@ -94,6 +55,43 @@
     </div>
 
     <div class="body visible" id="bodyHome">
+      <div id="mobileNav">
+        <div>
+          <i class="fa fa-bars fa-2x"></i>
+          <div id="mobileNavSubMenu">
+            <div class="mobileNavItem navigateHome">
+              <i class="fa fa-home"></i>
+              <div class="mobileIconDescription">
+                home
+              </div>
+            </div>
+            <div class="mobileNavItem navigateEducation">
+              <i class="fa fa-graduation-cap"></i>
+              <div class="mobileIconDescription">
+                education
+              </div>
+            </div>
+            <div class="mobileNavItem navigateBlog">
+              <i class="fa fa-comments"></i>
+              <div class="mobileIconDescription">
+                blog
+              </div>
+            </div>
+            <div class="mobileNavItem navigateProjects">
+              <i class="fa fa-code"></i>
+              <div class="mobileIconDescription">
+                projects
+              </div>
+            </div>
+            <div class="mobileNavItem navigateContact">
+              <i class="fa fa-user"></i>
+              <div class="mobileIconDescription">
+                tore
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <h1>home 
         <span class="fa-stack fa-sm">
           <i class="fa fa-square fa-stack-2x"></i>
@@ -202,8 +200,7 @@
       var navManager = new Navigation();
       $(document).ready(function() {
         var showSubmenu = true;
-        //if (isMobile()) {
-          console.info('MOBILE');
+        if (isMobile()) {
           $('#navbar').hide();
           $('#mobileNav').show();
           $('#mobileNav').click(function() {
@@ -217,63 +214,71 @@
             }
             showSubmenu = !showSubmenu;
           });
-        // } else {
-        //   console.info('DESKTOP');
-          
-        // }
-        
-        //history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, '#home');
-        var animating = {};
-        var startingHeight = $('.fa').height();
+          $('.body').css("padding", "4%");
+        } else {}
+        goToHome();
+        goToEducation();
+        goToBlog();
+        goToProjects();
+        goToContact();
+
+        history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
+
+        var startingHeight = $('#navbar > .item > div > .fa').height();
         $('#navbar > div').hover(function() {
           $(this).stop();
           $(this).find('.iconDescription').stop();
           $(this).css({align: 'left'});
-         // $(this).animate({height: '100px'}, 500);
-         var newHeight = Math.max(startingHeight * 2, startingHeight + $('.iconDescription').height());
+          var newHeight = Math.max(startingHeight * 2, startingHeight + $('.iconDescription').height());
+         
           $(this).animate({height: newHeight}, 500);
           $(this).find('.iconDescription').show().animate({opacity: 1}, 500);
         }, function() {
           $(this).stop();
           $(this).find('.iconDescription').stop();
-          $(this).animate({height: $('.fa').height()}, 500);
+          $(this).animate({height: startingHeight}, 500);
           $(this).find('.iconDescription').animate({opacity: 0}, 500, 'swing', function() {
             $(this).find('.iconDescription').hide();
           });
         });
 
-        $('#home').click(function() {
-          history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
-          navManager.changeTo('#bodyHome');
-        });
+        function goToHome() {
+          $('.navigateHome').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
+            navManager.changeTo('#bodyHome');
+          });
+        }
 
-        $('#education').click(function() {
-          history.pushState({changeFunction: 'changeTo', param: '#bodyEducation'}, null, '#education');
-          navManager.changeTo('#bodyEducation');
-        });
+        function goToEducation() {
+          $('.navigateEducation').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyEducation'}, null, '#education');
+            navManager.changeTo('#bodyEducation');
+          });
+        }
 
-        $('#blog').click(function() {
-          history.pushState({changeFunction: 'changeTo', param: '#bodyBlog'}, null, '#blog');
-          navManager.changeTo('#bodyBlog');
-        });
+        function goToBlog() {
+          $('.navigateBlog').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyBlog'}, null, '#blog');
+            navManager.changeTo('#bodyBlog');
+          });
+        }
 
-        $('#projects').click(function() {
-          history.pushState({changeFunction: 'changeTo', param: '#bodyProjects'}, null, '#projects');
-          navManager.changeTo('#bodyProjects');
-        });
+        function goToProjects() {
+          $('.navigateProjects').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyProjects'}, null, '#projects');
+            navManager.changeTo('#bodyProjects');
+          });
+        }
 
-        $('#contact').click(function() {
-          history.pushState({changeFunction: 'changeTo', param: '#bodyContact'}, null, '#contact');
-          navManager.changeTo('#bodyContact');
-        });
-
-
+        function goToContact() {
+          $('.navigateContact').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyContact'}, null, '#contact');
+            navManager.changeTo('#bodyContact');
+          });
+        }
       });
 
       $(window).bind('popstate', function() {
-          console.log('POP: ');
-          console.log(history.state);
-          console.log(' ');
           history.state && history.state.changeFunction && history.state.param && navManager[history.state.changeFunction](history.state.param);
       });
     </script>
