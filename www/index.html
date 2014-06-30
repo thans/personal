@@ -11,6 +11,43 @@
   </head>
 
   <body>
+    <div class="template mobileNav">
+      <div>
+        <i class="fa fa-bars fa-2x"></i>
+        <div class="mobileNavSubMenu">
+          <div class="mobileNavItem navigateHome">
+            <i class="fa fa-home"></i>
+            <div class="mobileIconDescription">
+              home
+            </div>
+          </div>
+          <div class="mobileNavItem navigateEducation">
+            <i class="fa fa-graduation-cap"></i>
+            <div class="mobileIconDescription">
+              education
+            </div>
+          </div>
+          <div class="mobileNavItem navigateBlog">
+            <i class="fa fa-comments"></i>
+            <div class="mobileIconDescription">
+              blog
+            </div>
+          </div>
+          <div class="mobileNavItem navigateProjects">
+            <i class="fa fa-code"></i>
+            <div class="mobileIconDescription">
+              projects
+            </div>
+          </div>
+          <div class="mobileNavItem navigateContact">
+            <i class="fa fa-user"></i>
+            <div class="mobileIconDescription">
+              tore
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="navbar">
       <div class="item navigateHome">
         <div>
@@ -55,48 +92,13 @@
     </div>
 
     <div class="body visible" id="bodyHome">
-      <div id="mobileNav">
-        <div>
-          <i class="fa fa-bars fa-2x"></i>
-          <div id="mobileNavSubMenu">
-            <div class="mobileNavItem navigateHome">
-              <i class="fa fa-home"></i>
-              <div class="mobileIconDescription">
-                home
-              </div>
-            </div>
-            <div class="mobileNavItem navigateEducation">
-              <i class="fa fa-graduation-cap"></i>
-              <div class="mobileIconDescription">
-                education
-              </div>
-            </div>
-            <div class="mobileNavItem navigateBlog">
-              <i class="fa fa-comments"></i>
-              <div class="mobileIconDescription">
-                blog
-              </div>
-            </div>
-            <div class="mobileNavItem navigateProjects">
-              <i class="fa fa-code"></i>
-              <div class="mobileIconDescription">
-                projects
-              </div>
-            </div>
-            <div class="mobileNavItem navigateContact">
-              <i class="fa fa-user"></i>
-              <div class="mobileIconDescription">
-                tore
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <h1>home 
         <span class="fa-stack fa-sm">
           <i class="fa fa-square fa-stack-2x"></i>
           <i class="fa fa-home fa-stack-1x fa-inverse"></i>
         </span>
+
       </h1>
       <hr />
       <h2>Greetings!</h2>
@@ -202,20 +204,20 @@
         var showSubmenu = true;
         if (isMobile()) {
           $('#navbar').hide();
-          $('#mobileNav').show();
-          $('#mobileNav').click(function() {
+          $('.fa-stack.fa-sm').replaceWith($('.mobileNav').removeClass('template'));
+          $('.mobileNav').click(function() {
             $(this).stop();
             if (showSubmenu) {
-              $('#mobileNavSubMenu').show().animate({opacity: 1}, 500);
+              $('.mobileNavSubMenu').show().animate({opacity: 1}, 500);
             } else {
-              $('#mobileNavSubMenu').animate({opacity: 0}, 500, 'swing', function() {
-                $('#mobileNavSubMenu').hide();
+              $('.mobileNavSubMenu').animate({opacity: 0}, 500, 'swing', function() {
+                $('.mobileNavSubMenu').hide();
               });
             }
             showSubmenu = !showSubmenu;
           });
           $('.body').css("padding", "4%");
-        } else {}
+        } else {} // do nothing
         goToHome();
         goToEducation();
         goToBlog();
