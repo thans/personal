@@ -241,13 +241,6 @@
           $('#navbar').show();
         } // do nothing
         goToHome();
-        goToEducation();
-        goToBlog();
-        goToProjects();
-        goToContact();
-
-        // TODO does this cause a double load?
-        history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
 
         var startingHeight = $('#navbar > .item > div > .fa').height();
         $('#navbar > div').hover(function() {
