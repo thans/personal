@@ -268,37 +268,73 @@
         });
 
         function goToHome() {
-          $('.navigateHome').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
-            navManager.changeTo('#bodyHome');
+          var flag = false;
+          $('.navigateHome').bind('touchstart click', function(){
+            if (!flag) {
+              flag = true;
+              setTimeout(function(){ flag = false; }, 100);
+              history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
+              navManager.changeTo('#bodyHome');
+            }
+
+            return false;
           });
         }
 
         function goToEducation() {
-          $('.navigateEducation').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyEducation'}, null, '#education');
-            navManager.changeTo('#bodyEducation');
+
+          var flag = false;
+          $('.navigateEducation').bind('touchstart click', function(){
+            if (!flag) {
+              flag = true;
+              setTimeout(function(){ flag = false; }, 100);
+              history.pushState({changeFunction: 'changeTo', param: '#bodyEducation'}, null, '#education');
+              navManager.changeTo('#bodyEducation');
+            }
+
+            return false;
           });
         }
 
         function goToBlog() {
-          $('.navigateBlog').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyBlog'}, null, '#blog');
-            navManager.changeTo('#bodyBlog');
+          var flag = false;
+          $('.navigateBlog').bind('touchstart click', function(){
+            if (!flag) {
+              flag = true;
+              setTimeout(function(){ flag = false; }, 100);
+              history.pushState({changeFunction: 'changeTo', param: '#bodyBlog'}, null, '#blog');
+              navManager.changeTo('#bodyBlog');
+            }
+
+            return false;
           });
         }
 
         function goToProjects() {
-          $('.navigateProjects').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyProjects'}, null, '#projects');
-            navManager.changeTo('#bodyProjects');
+          var flag = false;
+          $('.navigateProjects').bind('touchstart click', function(){
+            if (!flag) {
+              flag = true;
+              setTimeout(function(){ flag = false; }, 100);
+              history.pushState({changeFunction: 'changeTo', param: '#bodyProjects'}, null, '#projects');
+              navManager.changeTo('#bodyProjects');
+            }
+
+            return false;
           });
         }
 
         function goToContact() {
-          $('.navigateContact').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyContact'}, null, '#contact');
-            navManager.changeTo('#bodyContact');
+          var flag = false;
+          $('.navigateContact').bind('touchstart click', function(){
+            if (!flag) {
+              flag = true;
+              setTimeout(function(){ flag = false; }, 100);
+              history.pushState({changeFunction: 'changeTo', param: '#bodyContact'}, null, '#contact');
+              navManager.changeTo('#bodyContact');
+            }
+
+            return false;
           });
         }
       });
