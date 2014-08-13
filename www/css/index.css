@@ -153,3 +153,39 @@ li {
 .mobileIconDescription {
     float: right;
 }
+
+.hidden {
+    display: none;
+}
+
+.projectInfo > ul {
+    list-style-type: none;
+}
+
+.projectInfo > ul > li {
+    margin: 0;
+}
+
+.projectInfo > h3 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.projectInfo > p {
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.projectInfo > img {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.projectInfo {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 25px;
+}

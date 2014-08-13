@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div id="navbar">
+    <div class="hidden" id="navbar">
       <div class="item navigateHome">
         <div>
           <i class="fa fa-home fa-2x"></i>
@@ -102,7 +102,10 @@
       </h1>
       <hr />
       <h2>Greetings!</h2>
+      <!-- Add image here -->
       <p>My name is Tore Hanssen. I am a student at the University of Washington where I study Computer Engineering. My site is intended to give you an idea of some of my programming experience and help you get in contact with me.</p>
+
+      <p>Currently, I am studying at KTH - Sockholm.  I will be looking for a full time position as a Software Engineer to follow my graduation in June 2015.</p>
 
       <p>I am passionate about developing software that is simple and intuitive. I love being able to automate processes for people that simplify their work and their lives. Take a look around at some of my previous experience and shoot me an email if like what you see.</p>
     </div>
@@ -133,24 +136,11 @@
       <h1>blog 
         <span class="fa-stack fa-sm">
           <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
         </span>
       </h1>
       <hr />
       <script async src="https://static.medium.com/embed.js"></script><a class="m-profile" href="https://medium.com/@tore">Tore</a>
-      <!-- <div class="blogPost">
-        <h2>New site!</h2>
-        <h3>July 2014</h3>
-        <p>
-          Welcome to my new personal website!  This is mostly intended as a professional reference, but I hope to post a few other notes in this blog portion.  I had an idea for what I wanted this to look like one day at work, and started hacking away at it that night.
-        </p>
-        <p>
-          When I first started programming, I was told to keep it simple.  But as I quickly learned from Rob Nagler, simple ain't easy.  I tried to keep my new site simple yet refreshing - and I hope you find it just so.
-        </p>
-        <p class="signature">
-          -Tore
-        </p>
-      </div> -->
 
     </div>
     <div class="body" id="bodyProjects">
@@ -162,8 +152,35 @@
       </h1>
       <hr />
       <h2>Some recent work</h2>
-
-      <p>You can always check out <a href="http://github.com/thans"></i>my github account</a> to see a few of my publicly available projects.</p>
+      <!-- Add images here -->
+      <div class="projectInfo">
+        <h3>Rally Software</h3>
+        <p>As an intern at <a href="http://www.rallydev.com">Rally Software</a> for the summer of 2014, I was tasked with creating a fun data visualization.  The Blast Down Chart represents data from Rally as a game (inspired by "Space Invaders").</p>
+        <ul>
+          <li><a href="http://github.com/thans/blastDownChart">Code on github</a></li>
+          <li>Technologies: Websockets, Angular JS, Ext JS, melon JS, html, css</li>
+        </ul>
+      </div>
+      <div class="projectInfo">
+        <h3>Tor61</h3>
+        <p>A partner project in <a href="http://cs.washington.edu">CSE 461: Computer Networks</a>.  We created a simplified version of a TOR node to semi-anonymously browse the web.</p>
+        <ul>
+          <li>Unfortunately, the code must be private on github</li>
+          <li>Technologies: Java (Networking!), TCP, Proxy, Lots of synchronization/threading</li>
+        </ul>
+      </div>
+      <div class="projectInfo">
+        <h3>Fantasy Bachelor(ette)</h3>
+        <p>I helped create a game like "fantasy football" but for ABC's "The Bachelor" and "The Bachelorette" with one of my friends from UW.  I mostly worked on the database side.  The site used to be live at www.fantasybach.com for the last 2 seasons of the show</p>
+        <ul>
+          <li><a href="http://github.com/thans/fantasyBachelor">Code on github</a></li>
+          <li>Technologies: Node js, javascript, MySQL</li>
+        </ul>
+      </div>
+      <div class="projectInfo">
+        <h3>My github</h3>
+        <p>You can always check out <a href="http://www.github.com/thans">my github</a> repositories to see a subset of my projects, or maybe what I am currently working on!</p>
+      </div>
     </div>
     <div class="body" id="bodyContact">
       <h1>contact tore 
@@ -174,6 +191,7 @@
       </h1>
       <hr />
       <h2>Contact Information</h2>
+      <!-- Add image here -->
       <ul class="fa-ul">
         <li><a href="http://www.linkedin.com/pub/tore-hanssen/80/385/968"><i class="fa-li fa fa-linkedin"></i>LinkedIn - Professional Network</a></li>
         <li><a href="http://github.com/thans"><i class="fa-li fa fa-github"></i>GitHub - my publicly available github repositories represent a subset of my project experience.</a></li>
@@ -219,13 +237,16 @@
             showSubmenu = !showSubmenu;
           });
           $('.body').css("padding", "4%");
-        } else {} // do nothing
+        } else {
+          $('#navbar').show();
+        } // do nothing
         goToHome();
         goToEducation();
         goToBlog();
         goToProjects();
         goToContact();
 
+        // TODO does this cause a double load?
         history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
 
         var startingHeight = $('#navbar > .item > div > .fa').height();
