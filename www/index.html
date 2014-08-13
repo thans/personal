@@ -239,15 +239,12 @@
           $('.body').css("padding", "4%");
         } else {
           $('#navbar').show();
-        } // do nothing
-        goToHome();
-        goToEducation();
-        goToBlog();
-        goToProjects();
-        goToContact();
-
-        // TODO does this cause a double load?
-        //history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
+        }
+        goToHome(nav);
+        goToEducation(nav);
+        goToBlog(nav);
+        goToProjects(nav);
+        goToContact(nav);
 
         var startingHeight = $('#navbar > .item > div > .fa').height();
         $('#navbar > div').hover(function() {
@@ -267,74 +264,38 @@
           });
         });
 
-        function goToHome() {
-          var flag = false;
-          $('.navigateHome').bind('touchstart click', function(){
-            if (!flag) {
-              flag = true;
-              setTimeout(function(){ flag = false; }, 100);
-              history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
-              navManager.changeTo('#bodyHome');
-            }
-
-            return false;
+        function goToHome(nav) {
+          $('.navigateHome').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
+            nav.changeTo('#bodyHome');
           });
         }
 
-        function goToEducation() {
-
-          var flag = false;
-          $('.navigateEducation').bind('touchstart click', function(){
-            if (!flag) {
-              flag = true;
-              setTimeout(function(){ flag = false; }, 100);
-              history.pushState({changeFunction: 'changeTo', param: '#bodyEducation'}, null, '#education');
-              navManager.changeTo('#bodyEducation');
-            }
-
-            return false;
+        function goToEducation(nav) {
+          $('.navigateEducation').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyEducation'}, null, '#education');
+            nav.changeTo('#bodyEducation');
           });
         }
 
-        function goToBlog() {
-          var flag = false;
-          $('.navigateBlog').bind('touchstart click', function(){
-            if (!flag) {
-              flag = true;
-              setTimeout(function(){ flag = false; }, 100);
-              history.pushState({changeFunction: 'changeTo', param: '#bodyBlog'}, null, '#blog');
-              navManager.changeTo('#bodyBlog');
-            }
-
-            return false;
+        function goToBlog(nav) {
+          $('.navigateBlog').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyBlog'}, null, '#blog');
+            nav.changeTo('#bodyBlog');
           });
         }
 
-        function goToProjects() {
-          var flag = false;
-          $('.navigateProjects').bind('touchstart click', function(){
-            if (!flag) {
-              flag = true;
-              setTimeout(function(){ flag = false; }, 100);
-              history.pushState({changeFunction: 'changeTo', param: '#bodyProjects'}, null, '#projects');
-              navManager.changeTo('#bodyProjects');
-            }
-
-            return false;
+        function goToProjects(nav) {
+          $('.navigateProjects').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyProjects'}, null, '#projects');
+            nav.changeTo('#bodyProjects');
           });
         }
 
-        function goToContact() {
-          var flag = false;
-          $('.navigateContact').bind('touchstart click', function(){
-            if (!flag) {
-              flag = true;
-              setTimeout(function(){ flag = false; }, 100);
-              history.pushState({changeFunction: 'changeTo', param: '#bodyContact'}, null, '#contact');
-              navManager.changeTo('#bodyContact');
-            }
-
-            return false;
+        function goToContact(nav) {
+          $('.navigateContact').click(function() {
+            history.pushState({changeFunction: 'changeTo', param: '#bodyContact'}, null, '#contact');
+            nav.changeTo('#bodyContact');
           });
         }
       });
