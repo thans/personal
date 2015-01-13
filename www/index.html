@@ -1,361 +1,232 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="shortcut icon" href="img/tore_hanssen.jpg">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A passionate software engineer educated at The University of Washington">
+    <meta name="author" content="Tore Hanssen">
 
     <title>Tore Hanssen</title>
 
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
-  </head>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <body>
-    <div class="template mobileNav">
-      <div>
-        <i class="fa fa-bars fa-2x"></i>
-        <div class="mobileNavSubMenu">
-          <div class="mobileNavItem navigateHome">
-            <i class="fa fa-home"></i>
-            <div class="mobileIconDescription">
-              home
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- TODO bootstrap mask screen until images have loaded? -->
+    <a name="home"></a> 
+    <!-- Navigation -->
+
+    <div id="navbarbackground">
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">Tore Hanssen</a>
             </div>
-          </div>
-          <div class="mobileNavItem navigateEducation">
-            <i class="fa fa-graduation-cap"></i>
-            <div class="mobileIconDescription">
-              education
+            <!-- nav links, forms, and other content for toggling -->
+<!--             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header -->
+    <div class="intro-header">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <img src="img/tore_smallest.jpg" class="img-circle" alt="Circular Image">
+                        <h1>Hi, I'm Tore.</h1>
+                        <h3>NoToreous. PGATore.  Or just Tore.</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="http://github.com/thans" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                            <li>
+                                <a href="documents/Tore_Hanssen_Resume.pdf" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Resume</span></a>
+                            </li>
+                            <li>
+                                <a href="http://www.linkedin.com/pub/tore-hanssen/80/385/968" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="mobileNavItem navigateBlog">
-            <i class="fa fa-comments"></i>
-            <div class="mobileIconDescription">
-              blog
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+    <!-- Page Content -->
+
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Colorado Born<br><em>UW Educated</em></h2>
+                    <p class="lead">I will complete my B.S. Computer Engineering in June 2015 at The University of Washington.  While at UW, I have studied abroad, been a teaching assistant for introductory programming courses, participated in summer internships, and more - all while maintaining <a href="documents/Tore_Hanssen_Transcript.pdf">high academic achievement</a>.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/uw.png" alt="">
+                </div>
             </div>
-          </div>
-          <div class="mobileNavItem navigateProjects">
-            <i class="fa fa-code"></i>
-            <div class="mobileIconDescription">
-              projects
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">A tinkerer by heart<br></h2>
+                    <p class="lead">In and out of the classroom I have worked on a number of projects - from helping develop a touch screen user interface for a vehicle as part of the UW EcoCar 2 team, to working on fun side projects like <a href="http://www.fantasybach.com">Fantasy Bachelor</a> - a fantasy football like game I made with <a href="http://www.loeppky.com/mitchell">Mitchell Loeppky</a> for ABC's The Bachelor and The Bachelorette.  <a href="http://github.com/thans">Please check out my github</a> to see what I have been up to recently.<br /><br /><em>(Please note that the 2015 Fantasy Bachelor service was entirely redesigned by Mitchell)</em></p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/tinkerer.png" alt="">
+                </div>
             </div>
-          </div>
-          <div class="mobileNavItem navigateContact">
-            <i class="fa fa-phone"></i>
-            <div class="mobileIconDescription">
-              tore
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">More than an engineer</h2>
+                    <p class="lead">I have been busy outside of my engineering life as well.  I spent one summer in college volunteering as an english teacher in Russia.  I am a proven public speaker - <a href="http://www.com.washington.edu/2014/05/2013-14-scholarships-and-awards/">I took 2nd place</a> in the annual University of Washington Department of Communications Speaking competition in 2014.  For fun, I enjoy travelling, fishing, hiking, skiing, skating, and cooking.  I can speak some Swedish and Spanish, I enjoy trying new things, and I am a diehard football fan.  </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/aboutme.jpg" alt="">
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hidden" id="navbar">
-      <div class="item navigateHome">
-        <div>
-          <i class="fa fa-home fa-2x"></i>
-          <div class="iconDescription">
-            home
-          </div>
-        </div>
-      </div>
-      <div class="item navigateEducation">
-        <div>
-          <i class="fa fa-graduation-cap fa-2x"></i>
-          <div class="iconDescription">
-            education
-          </div>
-        </div>
-      </div>
-      <div class="item navigateBlog">
-        <div>
-          <i class="fa fa-comments fa-2x"></i>
-          <div class="iconDescription">
-            blog
-          </div>
-        </div>
-      </div>
-      <div class="item navigateProjects">
-        <div>
-          <i class="fa fa-code fa-2x"></i>
-          <div class="iconDescription">
-            projects
-          </div>
-        </div>
-      </div>
-      <div class="item navigateContact">
-        <div>
-          <i class="fa fa-phone fa-2x"></i>
-          <div class="iconDescription">
-            tore
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div id="headerImage" class="imageHome">
+        </div>
+        <!-- /.container -->
 
     </div>
-    <div class="cloudy">
-    </div>
-    <div class="body visible" id="bodyHome">
-      <div class="bodyHeader">
+    <!-- /.content-section-a -->
 
-        <h1 class="header-description">home 
-          <span class="fa-stack fa-sm">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-home fa-stack-1x fa-inverse"></i>
-          </span>
-        </h1>
-      </div>
+    <div class="banner">
 
-      <div class="bodyContents">
-        <h2>Greetings!</h2>
-        <p>My name is Tore Hanssen. I am a student at the University of Washington where I study Computer Engineering. My site is intended to give you an idea of some of my programming experience and help you get in contact with me.</p>
+        <div class="container">
 
-        <p>Currently, I am studying at KTH - Sockholm.  I will be looking for a full time position as a Software Engineer to follow my graduation in June 2015.</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Find Tore:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline intro-social-buttons">
 
-        <p>I am passionate about developing software that is simple and intuitive. I love being able to automate processes for people that simplify their work and their lives. Take a look around at some of my previous experience and shoot me an email if like what you see.</p>
-      </div>
-    </div>
-    <div class="body" id="bodyEducation">
-      <div class="bodyHeader">
-        <h1 class="header-description">education 
-          <span class="fa-stack fa-sm">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
-          </span>
-        </h1>
-      </div>
-      <div class="bodyContents">
-        <h2><span class="quote"> "Practice does not make perfect. Only perfect practice makes perfect"</span> - Vince Lombardi</h2>
-        <p>Quick Facts:
-          <ul class="fa-ul">
-            <li><i class="fa-li fa fa-university"></i>University of Washington</li>
-            <li><i class="fa-li fa fa-laptop"></i>Computer Engineering</li>
-            <li><i class="fa-li fa fa-graduation-cap"></i>Graduating: June 2015</li>
-            <li><i class="fa-li fa fa-pencil"></i>GPA: 3.65</li>
-            <li><a href="Tore_Hanssen_Transcript.pdf"><i class="fa-li fa fa-file-pdf-o"></i>Transcript - an unofficial transcript from The University of Washington.</a></li>
-          </ul>
-          
-        </p>
-        <p>I am currently a student at The University of Washington, where I am studying Computer Engineering.  Though I am continually fascinated by my Computer Science and Engineering courses, I am also very interested in communication and leadership.  I excelled in my Public Speaking course and even took second in the UW Department of Communication's annual speech competition.</p>
-        <p>While at the University of Washington, I have had a number of chances to explore programming in different ways both in and outside of the classroom.  Most recently, my two favorite courses were my Operating Systems and Computer Networks courses - I found the challenges presented in each of these courses as well as the engineering solutions we discussed (and the tradeoffs inherent in those solutions) very stimulating.</p>
-        <p>Outside of the classroom, I have learned through my time as a teaching assistant, my participation on the UW EcoCar 2 team, and the various projects I have done on the side.  I was a teaching assistant at UW for introductory programming courses for 2 quarters and I plan to return for my final quarters at UW.  On the UW EcoCar 2 team, I worked with a group of 4 other programmers and 3 designers to create an advanced touch screen interface for our vehicle.  Some of the projects I have done on the side are available on <a href="http://github.com/thans">my github account</a>.  Most recently, I worked on a Fantasy Football like game for "The Bachelor" and "The Bachelorette" with a friend of mine - <a href="http://www.fantasybach.com">make your team</a> next time the show starts.  Check out my projects page to learn more.</p>
-      </div>
-    </div>
-    <div class="body" id="bodyBlog">
-      <div class="bodyHeader">
-        <h1 class="header-description">blog 
-          <span class="fa-stack fa-sm">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
-          </span>
-        </h1>
-      </div>
-      
-        <script async src="https://static.medium.com/embed.js"></script><a class="m-profile" href="https://medium.com/@tore">Tore</a>
-      
-    </div>
-    <div class="body" id="bodyProjects">
-      <div class="bodyHeader">
-        <h1 class="header-description">projects 
-          <span class="fa-stack fa-sm">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-          </span>
-        </h1>
-      </div>
-      <div class="bodyContents">
-        <h2>Some recent work</h2>
-        <!-- Add images here -->
-        <div class="projectInfo">
-          <h3>Pinball Battle</h3>
-          <p>While studying at KTH in Stockholm, Sweden, I took a computer game design course.  We developed <a href="http://students.washington.edu/toreh/pinballBattle">Pinball Battle</a> using Unity, targeting the home console party game crowd.  Pinball Battle is a multiplayer, free for all, pinball RTS game - gheck out the gameplay footage on the website!</p>
-          <ul>
-            <li><a href="http://students.washington.edu/toreh/pinballBattle">About the game</a></li>
-            <li>Technologies: Unity, C#</li>
-          </ul>
+                        <li>
+                            <a href="http://github.com/thans" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/users/2544318/tore-hanssen" class="btn btn-default btn-lg"><i class="fa fa-stack-overflow fa-fw"></i> <span class="network-name">Stack Overflow</span></a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/pub/tore-hanssen/80/385/968" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
+        <!-- /.container -->
 
-        <div class="projectInfo">
-          <h3>Rally Software</h3>
-          <p>As an intern at <a href="http://www.rallydev.com">Rally Software</a> for the summer of 2014, I was tasked with creating a fun data visualization.  The Blast Down Chart represents data from Rally as a game (inspired by "Space Invaders").</p>
-          <ul>
-            <li><a href="http://github.com/thans/blastDownChart">Code on github</a></li>
-            <li>Technologies: Websockets, Angular JS, Ext JS, melon JS, html, css</li>
-          </ul>
-        </div>
-        <div class="projectInfo">
-          <h3>Tor61</h3>
-          <p>A partner project in <a href="http://cs.washington.edu">CSE 461: Computer Networks</a>.  We created a simplified version of a TOR node to semi-anonymously browse the web.</p>
-          <ul>
-            <li>Unfortunately, the code must be private on github</li>
-            <li>Technologies: Java (Networking!), TCP, Proxy, Lots of synchronization/threading</li>
-          </ul>
-        </div>
-        <div class="projectInfo">
-          <h3>Fantasy Bachelor(ette)</h3>
-          <p>I helped create a game like "fantasy football" but for ABC's "The Bachelor" and "The Bachelorette" with one of my friends from UW.  I mostly worked on the database side.  The site used to be live at www.fantasybach.com for the last 2 seasons of the show</p>
-          <ul>
-            <li><a href="http://github.com/thans/fantasyBachelor">Code on github</a></li>
-            <li>Technologies: Node js, javascript, MySQL</li>
-          </ul>
-        </div>
-        <div class="projectInfo">
-          <h3>My github</h3>
-          <p>You can always check out <a href="http://www.github.com/thans">my github</a> repositories to see a subset of my projects, or maybe what I am currently working on!</p>
-        </div>
-      </div>
     </div>
-    <div class="body" id="bodyContact">
-      <div class="bodyHeader">
-        <h1 class="header-description">contact tore 
-          <span class="fa-stack fa-sm">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-          </span>
-        </h1>
-      </div>
-      <div class="bodyContents">
-        <h2>Contact Information</h2>
-        <!-- Add image here -->
-        <ul class="fa-ul">
-          <li><a href="http://www.linkedin.com/pub/tore-hanssen/80/385/968"><i class="fa-li fa fa-linkedin"></i>LinkedIn - Professional Network</a></li>
-          <li><a href="http://github.com/thans"><i class="fa-li fa fa-github"></i>GitHub - my publicly available github repositories represent a subset of my project experience.</a></li>
-          <li><a href="http://stackoverflow.com/users/2544318/tore-hanssen"><i class="fa-li fa fa-stack-overflow"></i>Stack Overflow - programming community involvement.</a></li>
-          
-          <li><a href="Tore_Hanssen_Resume.pdf"><i class="fa-li fa fa-file-pdf-o"></i>Resume - a pdf copy of my resume.</a></li>
-          <li><a href="Tore_Hanssen_Transcript.pdf"><i class="fa-li fa fa-file-pdf-o"></i>Transcript - an unofficial transcript from The University of Washington.</a></li>
-          <li><i class="fa-li fa fa-pencil-square-o"></i>toreh (at) cs.washington.edu</li>
-        </ul>
-      </div>
-    </div>
-    <script src="scripts/jquery.js"></script>
-    <script language="javascript">
-      <!-- hide from none JavaScript Browsers 
+    <!-- /.banner -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>toreh (at) cs.washington.edu</li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="documents/Tore_Hanssen_Resume.pdf">Resume</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="documents/Tore_Hanssen_Transcript.pdf">Transcript</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="http://www.medium.com/@Tore">Blog</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Tore Hanssen 2015. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-      image1= new Image();
-      image1.src = "img/uw.jpg";
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-      image2 = new Image();
-      image2.src = "img/index.jpg";
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-      image3 = new Image();
-      image3.src = "img/whiteboard.jpg";
-      image4 = new Image();
-      image4.src = "img/contact.jpg";
-      image5 = new Image();
-      image5.src = "img/projects.jpg";
-
-      // End Hiding -->
-      </script>
-    <script>
-
-
-
-
-      var Navigation = function() {
-        this.changeTo = function(id, headerImage) {
-          $('.visible').animate({opacity: 0}, 500, 'swing', function() {
-            $(this).hide().removeClass('visible');
-            $(id).show().animate({opacity: 1}, 500).addClass('visible');
-            $('#headerImage').removeClass('imageHome imageBlog imageEducation imageContact imageProjects').addClass(headerImage);
-          });       
-        }
-      }
-
-      function isMobile() {
-        var check = false;
-        (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
-        return check;
-      }
-
-      var navManager = new Navigation();
-      $(document).ready(function() {
-        var showSubmenu = true;
-        if (isMobile()) {
-          $('#navbar').hide();
-          $('.fa-stack.fa-sm').replaceWith($('.mobileNav').removeClass('template'));
-          $('.mobileNav').click(function() {
-            $(this).stop();
-            if (showSubmenu) {
-              $('.mobileNavSubMenu').show().animate({opacity: 1}, 500);
-            } else {
-              $('.mobileNavSubMenu').animate({opacity: 0}, 500, 'swing', function() {
-                $('.mobileNavSubMenu').hide();
-
-              });
-            }
-            showSubmenu = !showSubmenu;
-          });
-          $('.body').css("padding", "4%");
-        } else {
-          $('#navbar').show();
-        }
-        history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
-        goToHome(navManager);
-        goToEducation(navManager);
-        goToBlog(navManager);
-        goToProjects(navManager);
-        goToContact(navManager);
-
-        var startingHeight = $('#navbar > .item > div > .fa').height();
-        $('#navbar > div').hover(function() {
-          $(this).stop();
-          $(this).find('.iconDescription').stop();
-          $(this).css({align: 'left'});
-          var newHeight = Math.max(startingHeight * 2, startingHeight + $('.iconDescription').height());
-         
-          $(this).animate({height: newHeight}, 500);
-          $(this).find('.iconDescription').show().animate({opacity: 1}, 500);
-        }, function() {
-          $(this).stop();
-          $(this).find('.iconDescription').stop();
-          $(this).animate({height: startingHeight}, 500);
-          $(this).find('.iconDescription').animate({opacity: 0}, 500, 'swing', function() {
-            $(this).find('.iconDescription').hide();
-          });
-        });
-
-        function goToHome(nav) {
-          $('.navigateHome').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyHome'}, null, '#home');
-            nav.changeTo('#bodyHome', 'imageHome');
-          });
-        }
-
-        function goToEducation(nav) {
-          $('.navigateEducation').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyEducation'}, null, '#education');
-            nav.changeTo('#bodyEducation', 'imageEducation');
-          });
-        }
-
-        function goToBlog(nav) {
-          $('.navigateBlog').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyBlog'}, null, '#blog');
-            nav.changeTo('#bodyBlog', 'imageBlog');
-          });
-        }
-
-        function goToProjects(nav) {
-          $('.navigateProjects').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyProjects'}, null, '#projects');
-            nav.changeTo('#bodyProjects', 'imageProjects');
-          });
-        }
-
-        function goToContact(nav) {
-          $('.navigateContact').click(function() {
-            history.pushState({changeFunction: 'changeTo', param: '#bodyContact'}, null, '#contact');
-            nav.changeTo('#bodyContact', 'imageContact');
-          });
-        }
-      });
-
-      $(window).bind('popstate', function() {
-          history.state && history.state.changeFunction && history.state.param && navManager[history.state.changeFunction](history.state.param);
-      });
-    </script>
-
-  </body>
+</body>
 </html>
